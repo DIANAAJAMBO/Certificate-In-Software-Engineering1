@@ -1,0 +1,83 @@
+doctype html
+head
+  title Register Form
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS v5.2.1
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT' crossorigin='anonymous')
+  style.
+    input {
+    margin-top: 20px;
+    }
+    select {
+    margin-top: 20px;
+    }
+if data.length 
+ each person in data
+    form(action='/register' name='register' onsubmit='return Validate();' method='POST')
+    .row(style='height:700px; margin-top:40px; margin-left:100px; margin-right:100px;')
+        div(clas='row')
+        #heading(style='background-color: black; height:60px; color:white')
+            h3 GENQ KYC FORM
+        .row
+        fieldset
+            legend Bio Data
+            .row
+            .col-md-6
+                div
+                input#firstname.form-control(type='text' name='firstname' placeholder='First Name' value=person.firstname)
+                span#FNErr
+            .col-md-6
+                div
+                input#lastname.form-control(type='text' name='lastname' placeholder='Last Name' value=person.lastname)
+            .row
+            .col-md-6
+                div
+                input#dob.form-control(type='date' name='dob' placeholder='Date Of Birth(DD/MM/YYYY)' value=person.dob)
+            .col-md-6
+                div
+                select#gender.form-control(type='text' name='gender' placeholder='--Select Gender--')
+                    option(value='') --Select Gender--
+                    option(value='male' selected=person.gender==='male') Male
+                    option(value='female' selected=person.gender==='female') Female
+        .row
+        fieldset
+            legend Location
+            .row
+            .row
+                .col-md-6
+                select#country.form-control(type='text' name='country' placeholder='Country' value=person.country)
+                    option(value='') --Select Country--
+                    option(value='Uganda' selected=person.country==='Uganda') Uganda
+                    option(value='Kenya' selected=person.country==='Kenya') Kenya
+                    option(value='Tanzania' selected=person.country==='Tanzania') Tanzania
+                    option(value='Rwanda' selected=person.country==='Rwanda') Rwanda
+                    option(value='Burundi' selected=person.country==='Burundi') Burundi
+                .col-md-6
+                div
+                    input#state-district.form-control(type='text' name='district' placeholder='State/District' value=person.district)
+            .row
+            .col-md-6
+                div
+                input#town.form-control(type='text' name='town' placeholder='Town' value=person.town)
+            .col-md-6
+                div
+                input#zipcode.form-control(type='number' name='zipcode' placeholder='Zip Code' value=person.zipcode)
+        .row
+        fieldset
+            legend Contacts and Address
+            .row
+            .col-md-6
+                div
+                input#phonenumber1.form-control(type='text' name='phonenumber1' placeholder='Phone Number 1' value=person.phonenumber1)
+            .col-md-6
+                div
+                input#phonenumber2.form-control(type='text' name='phonenumber2' placeholder='Phone Number 2' value=person.phonenumber2)
+            .row
+            div
+                input#email.form-control(type='text' name='email' placeholder='Email' value=person.email)
+        button(style='width:25%; margin-left: 70%; height:70px; border-radius: 10px;' type='submit') SUBMIT
+// Bootstrap JavaScript Libraries
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js' integrity='sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz' crossorigin='anonymous')
+script(src='./validations.js')

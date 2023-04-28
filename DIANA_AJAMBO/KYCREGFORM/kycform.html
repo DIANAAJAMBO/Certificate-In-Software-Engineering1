@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Register Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+        input {
+            margin-top: 20px;
+        }
+
+        select {
+            margin-top: 20px;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <form action="#" name="" onsubmit="return Validate();" method="POST">
+        <div class="row" style="height:700px; margin-top:40px; margin-left:100px; margin-right:100px;">
+            <div clas="row">
+                <div id='heading' style='background-color: black; height:60px; color:white'>
+                    <h3>GENQ KYC FORM</h3>
+                </div>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend>Bio Data</legend>
+                    <div class='row'>
+                        <div class="col-md-6">
+                            <div>
+                                <input type="text" class="form-control" name="firstname" id="firstname"
+                                    placeholder="First Name">
+                                <span id="FNErr"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <input type="text" class="form-control" name="lastname" id="lastname"
+                                    placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-6">
+                            <div>
+                                <input type="date" class="form-control" name="dob" id="dob"
+                                    placeholder="Date Of Birth(DD/MM/YYYY)">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <select type="text" class="form-control" name="gender" id="gender"
+                                    placeholder="--Select Gender--">
+                                    <option value="">--Select Gender--</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend>Location</legend>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select type="text" class="form-control" name="country" id="country"
+                                    placeholder="Country">
+                                    <option value="">--Select Country--</option>
+                                    <option value="Uganda">Uganda</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option Value="Tanzania">Tanzania</option>
+                                    <option Value="Rwanda">Rwanda</option>
+                                    <option Value="Burundi">Burundi</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" class="form-control" name="district" id="state-district"
+                                        placeholder="State/District">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <input type="text" class="form-control" name="town" id="town" placeholder="Town">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <input type="number" class="form-control" name="zipcode" id="zipcode"
+                                    placeholder="Zip Code">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend>Contacts and Address</legend>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <input type="text" class="form-control" name="phonenumber1" id="phonenumber1"
+                                    placeholder="Phone Number 1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <input type="text" class="form-control" name="phonenumber2" id="phonenumber2"
+                                    placeholder="Phone Number 2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button style="width:25%; margin-left: 70%; height:70px; border-radius: 10px;" type="submit">SUBMIT</button>
+        </div>
+
+    </form>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="./public/validations.js"></script>
+</body>
+
+</html>
